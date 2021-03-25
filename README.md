@@ -1,0 +1,1 @@
+# CakePHP-edocnszw_localinspire-
