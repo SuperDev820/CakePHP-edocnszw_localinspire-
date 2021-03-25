@@ -1,0 +1,3 @@
+<?= $this->Form->control('additionals[' . $filter->id . '][value]', ['templates' => ['inputContainer' => '{{content}}'], 'label' => false, 'class' => 'form-control filtercontrol ' . $filter->input_class, 'placeholder' =>  $filter->placeholder, 'type' => $filter->input_type, 'autocomplete' => 'off', "data-filtername" => $filter->name, 'value' => $this->Custom->getAdditionalValue((!empty($business) ? $business : null), $filter)]) ?>
+
+<!-- <?= $this->Form->control($this->Custom->getPromoText($filter->name), ['templates' => ['inputContainer' => '{{content}}'], 'label' => false, 'class' => 'form-control', 'placeholder' =>  $filter->placeholder, 'type' => $filter->input_type, 'autocomplete' => 'off', 'required']) ?> -->

@@ -1,0 +1,2 @@
+[18-Sep-2020 05:25:11 America/New_York] PHP Fatal error:  You must enable the intl extension to use CakePHP. in /home/edocnszw/public_html/config/requirements.php on line 31
+[18-Sep-2020 05:25:47 America/New_York] PHP Fatal error:  You must enable the intl extension to use CakePHP. in /home/edocnszw/public_html/config/requirements.php on line 31

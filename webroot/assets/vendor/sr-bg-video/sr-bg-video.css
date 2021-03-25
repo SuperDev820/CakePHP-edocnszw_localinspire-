@@ -1,0 +1,62 @@
+.sr-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+}
+
+.sr-youtube,
+.sr-vimeo {
+  display: none;
+}
+
+.sr-html5 {
+  /* width: auto; */
+  width: 100%;
+  max-width: none;
+  height: auto;
+  min-height: 100%;
+}
+
+.sr-video-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+[data-sr-bgv-id],
+[data-sr-bgv-path] {
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .sr-youtube,
+  .sr-vimeo {
+    display: block;
+    width: 100%;
+    height: 130%;
+  }
+
+  .sr-youtube iframe,
+  .sr-youtube embed,
+  .sr-vimeo iframe,
+  .sr-vimeo embed {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .sr-video-preview {
+    display: block;
+  }
+}

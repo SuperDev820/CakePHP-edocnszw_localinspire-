@@ -1,0 +1,2 @@
+<?php $this->disableAutoLayout();?>
+  <?=$this->Form->control('department_id', ['templates' => ['inputContainer' => '{{content}}'], 'options' => $departments, 'empty' => true, 'label' => false, 'class' => 'select2 departments_select2 show-tick', "style" => "width: 100%", 'required']);?>

@@ -1,0 +1,2 @@
+<?php $this->disableAutoLayout(); ?>
+<?= $this->element('follow_block', ['ckUser' => $currentUser, 'targetUser' => $targetUser, 'ckfollowsUser' => $followsUser, 'ckfollowedByUser' => $followedByUser, 'random_id_target' => $random_id_target]) ?>

@@ -1,0 +1,177 @@
+/*
+ * SR Mega Menu - jQuery Plugin
+ * @version: 1.0.0 (Mon, 14 Jan 2019)
+ *
+ * @license:
+ *
+ * Copyright 2019 StupidRommy
+ *
+ */
+
+.sr-menu-initialized {
+	position: relative;
+	z-index: 10;
+}
+
+.sr-menu-initialized .animated {
+	-webkit-animation-duration: 300ms;
+	animation-duration: 300ms;
+}
+
+.sr-overflow-x-locked {
+	overflow-x: hidden;
+}
+
+.sr-sub-menu,
+.sr-mega-menu {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	z-index: 2;
+	margin-top: -.002rem;
+	visibility: hidden;
+	background-color: #fff;
+	opacity: 1 !important;
+}
+
+.sr-sub-menu-opened > .sr-sub-menu,
+.sr-mega-menu-opened > .sr-mega-menu {
+	visibility: visible;
+	opacity: 1;
+}
+
+.sr-sub-menu {
+	min-width: 180px;
+}
+
+.sr-has-sub-menu {
+	overflow: hidden;
+	position: relative;
+}
+
+.sr-sub-menu-opened {
+	overflow: visible;
+}
+
+.sr-sub-menu .sr-sub-menu,
+.sr-mega-menu .sr-sub-menu,
+.sr-sub-menu .sr-mega-menu,
+.sr-mega-menu .sr-mega-menu {
+	top: 0;
+	left: 100%;
+	margin-top: 0;
+}
+
+/*------------------------------------
+	Vertical Direction
+------------------------------------*/
+
+.sr-menu-vertical .sr-sub-menu,
+.sr-menu-vertical .sr-mega-menu {
+	top: 0;
+	left: 100%;
+	margin-top: 0;
+}
+
+.sr-menu-vertical .sr-sub-menu {
+	width: auto;
+}
+
+.sr-menu-vertical .sr-mega-menu {
+	height: 100%;
+}
+
+/*------------------------------------
+	Mobile state
+------------------------------------*/
+
+.sr-mobile-state .sr-sub-menu,
+.sr-mobile-state .sr-mega-menu {
+	position: static;
+	visibility: visible;
+}
+
+.sr-mobile-state .sr-has-mega-menu[data-max-width] > .sr-mega-menu,
+.sr-mobile-state .sr-has-sub-menu[data-max-width] > .sr-sub-menu {
+	max-width: initial !important;
+}
+
+/*------------------------------------
+	RTL
+------------------------------------*/
+
+.sr-menu-initialized.sr-rtl {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+.sr-menu-initialized.sr-rtl .sr-sub-menu,
+.sr-menu-initialized.sr-rtl .sr-mega-menu {
+	left: auto;
+	right: 0;
+}
+
+.sr-menu-initialized.sr-rtl .sr-sub-menu .sr-sub-menu,
+.sr-menu-initialized.sr-rtl .sr-mega-menu .sr-sub-menu,
+.sr-menu-initialized.sr-rtl .sr-sub-menu .sr-mega-menu,
+.sr-menu-initialized.sr-rtl .sr-mega-menu .sr-mega-menu {
+	left: auto;
+	right: 100%;
+}
+
+/*------------------------------------
+	Smart Position
+------------------------------------*/
+
+.sr-menu-initialized:not(.sr-mobile-state) .sr-sub-menu.sr-reversed,
+.sr-menu-initialized:not(.sr-mobile-state) .sr-mega-menu.sr-reversed {
+	left: auto;
+	right: 0;
+}
+
+.sr-menu-initialized:not(.sr-mobile-state) .sr-sub-menu .sr-sub-menu.sr-reversed,
+.sr-menu-initialized:not(.sr-mobile-state) .sr-mega-menu .sr-sub-menu.sr-reversed,
+.sr-menu-initialized:not(.sr-mobile-state) .sr-sub-menu .sr-mega-menu.sr-reversed,
+.sr-menu-initialized:not(.sr-mobile-state) .sr-mega-menu .sr-mega-menu.sr-reversed {
+	left: auto;
+	right: 100%;
+}
+
+.sr-menu-initialized.sr-rtl:not(.sr-mobile-state) .sr-sub-menu.sr-reversed,
+.sr-menu-initialized.sr-rtl:not(.sr-mobile-state) .sr-mega-menu.sr-reversed {
+	right: auto;
+	left: 0;
+}
+
+.sr-menu-initialized.sr-rtl:not(.sr-mobile-state) .sr-sub-menu .sr-sub-menu.sr-reversed,
+.sr-menu-initialized.sr-rtl:not(.sr-mobile-state) .sr-mega-menu .sr-sub-menu.sr-reversed,
+.sr-menu-initialized.sr-rtl:not(.sr-mobile-state) .sr-sub-menu .sr-mega-menu.sr-reversed,
+.sr-menu-initialized.sr-rtl:not(.sr-mobile-state) .sr-mega-menu .sr-mega-menu.sr-reversed {
+	right: auto;
+	left: 100%;
+}
+
+/*------------------------------------
+	Positions
+	(only 'horizontal' direction)
+------------------------------------*/
+
+.sr-menu-initialized.sr-menu-horizontal .sr-mega-menu.sr-position-left {
+	left: 0;
+	right: auto;
+}
+
+.sr-menu-initialized.sr-menu-horizontal .sr-mega-menu.sr-position-right {
+	left: auto;
+	right: 0;
+}
+
+.sr-menu-initialized.sr-menu-horizontal .sr-mega-menu.sr-position-center {
+	right: auto;
+	left: 50%;
+
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
